@@ -23,7 +23,7 @@ module.exports = function(io) {
     });
 
     // Game client has joined
-    socket.on('gameclientjoin', function(data){
+    socket.on('gameclientjoined', function(data){
         socket.room = data.room;
         socket.join(socket.room);
         console.log("Game joined room: "+socket.room);
